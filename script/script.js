@@ -124,3 +124,59 @@ toggle.addEventListener("click", () => {
         localStorage.setItem("theme", "dark");
     }
 });
+
+/* =========================
+   SKILLS CAROUSEL DYNAMIC
+========================= */
+
+const skills = [
+    // DEV
+    { name: "CSS3", image: "../images/css3.svg", type: "dev" },
+    { name: "HTML5", image: "../images/html5.svg", type: "dev" },
+    { name: "JavaScript", image: "../images/javascript.svg", type: "dev" },
+    { name: "React", image: "../images/react.svg", type: "dev" },
+    { name: "Responsive Design", image: "../images/responsive.png", type: "dev" },
+    { name: "WordPress", image: "../images/wordpress.svg", type: "dev" },
+  
+    // QA
+    { name: "Cypress", image: "../images/cypress.svg", type: "qa" },
+    { name: "Postman", image: "../images/postman.svg", type: "qa" },
+    { name: "Swagger", image: "../images/swagger.svg", type: "qa" },
+    { name: "Stratégie de test", image: "../images/test.png", type: "qa" },
+    { name: "Optimisation & Debug", image: "../images/optimisation-et-debug.png", type: "qa" },
+  
+    // TOOLS
+    { name: "Git", image: "../images/git.svg", type: "tools" },
+    { name: "GitHub", image: "../images/github.svg", type: "tools" },
+    { name: "Docker", image: "../images/docker.svg", type: "tools" },
+    { name: "Jira", image: "../images/jira.svg", type: "tools" },
+    { name: "Confluence", image: "../images/confluence.svg", type: "tools" },
+    { name: "Notion", image: "../images/notion.svg", type: "tools" },
+    { name: "Trello", image: "../images/trello.svg", type: "tools" },
+    { name: "Slack", image: "../images/slack.svg", type: "tools" },
+    { name: "Figma", image: "../images/figma.svg", type: "tools" },
+    { name: "Miro", image: "../images/miro.png", type: "tools" },
+    { name: "Visual Studio Code", image: "../images/vscode.svg", type: "tools" },
+    { name: "Agile / Scrum", image: "../images/agile.png", type: "tools" },
+    { name: "Gestion de projet", image: "../images/gestion-de-projet.png", type: "tools" }
+  ];
+  
+  function generateSkills() {
+    const track = document.getElementById("skills-track");
+  
+    const doubledSkills = skills.concat(skills);
+  
+    doubledSkills.forEach(skill => {
+      const div = document.createElement("div");
+      div.classList.add("skill-item", skill.type);
+  
+      div.innerHTML = `
+        <img src="${skill.image}" alt="${skill.name}">
+        <span>${skill.name}</span>
+      `;
+  
+      track.appendChild(div);
+    });
+  }
+  
+  generateSkills();

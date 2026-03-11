@@ -153,4 +153,130 @@ body.light-mode .navbar-brand {
     color: #198754;
 }
 
+/* ===== SKILLS CAROUSEL ===== */
+
+.skills-carousel {
+    overflow: hidden;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.skills-track {
+    display: flex;
+    gap: 2.5rem;
+    width: max-content;
+    animation: scroll 50s linear infinite;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 26px;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 255, 255, 0.08)
+    );
+
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+}
+
+.skill-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    background: var(--accent-color);
+    color: white;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.skills-carousel:hover .skills-track {
+    animation-play-state: paused;
+}
+
+#skills .card {
+    display: none;
+}
+
+.skill-item.dev {
+    border: 1px solid rgba(52, 152, 219, 0.4);
+}
+
+.skill-item.qa {
+    border: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+.skill-item.tools {
+    border: 1px solid rgba(46, 204, 113, 0.4);
+}
+
+.skill-item.dev:hover {
+    background: rgba(52, 152, 219, 0.25);
+}
+
+.skill-item.qa:hover {
+    background: rgba(231, 76, 60, 0.25);
+}
+
+.skill-item.tools:hover {
+    background: rgba(46, 204, 113, 0.25);
+}
+
+body.light-mode .skill-item {
+    background: linear-gradient(
+        145deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.02)
+    );
+}
+
+body.light-mode .skill-item img {
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+
+.cv-button {
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color);
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.08)
+    );
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    background: var(--accent-color);
+    color: white;
+}
+
 /* footer */
