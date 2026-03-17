@@ -47,14 +47,15 @@ body.light-mode .navbar-brand {
 #skills,
 #portfolio,
 #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 80px;
 }
 #about h2,
 #skills h2,
 #portfolio h2,
 #contact h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 #contact {
     padding-bottom: 4rem;
@@ -279,4 +280,155 @@ body.light-mode .skill-item img {
     color: white;
 }
 
+.portfolio-cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .portfolio-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .portfolio-button:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  #contact {
+    padding: 80px 0 100px 0;
+    background: var(--bg-color);
+  }
+  
+  .contactColumn {
+    text-align: center;
+    color: #ddd;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .contactColumn i {
+    color: #e85d5d;
+    margin-bottom: 20px;
+  }
+
+  .contactColumn:hover {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+  
+  .contact-form-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-form {
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .form-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #2a2f38;
+    background: #12161d;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #e85d5d;
+    box-shadow: 0 0 0 2px rgba(232, 93, 93, 0.2);
+  }
+  
+  .contact-btn {
+    padding: 16px 40px;
+    border-radius: 14px;
+    border: 2px solid #e85d5d;
+    background: transparent;
+    color: #e85d5d;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 40px auto 0 auto;
+  }
+  
+  .contact-btn:hover {
+    background: #e85d5d;
+    color: white;
+  }
+  
+  .form-success {
+    margin-top: 20px;
+    color: #4ade80;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .form-success.show {
+    opacity: 1;
+  }
+
 /* footer */
+
+.footer {
+    padding: 40px 0;
+    background: var(--bg-color);
+  }
+  
+  .footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .footer-name {
+    color: #777;
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+  }

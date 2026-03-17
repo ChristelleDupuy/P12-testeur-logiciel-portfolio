@@ -180,3 +180,29 @@ const skills = [
   }
   
   generateSkills();
+
+  const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("formSuccess");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const button = form.querySelector("button");
+    button.style.opacity = "0.7";
+    button.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      form.reset();
+      button.style.opacity = "1";
+      button.style.pointerEvents = "auto";
+
+      successMessage.textContent = "✨ Message envoyé avec succès !";
+      successMessage.classList.add("show");
+
+      setTimeout(() => {
+        successMessage.classList.remove("show");
+      }, 4000);
+    }, 1000);
+  });
+}
