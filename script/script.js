@@ -206,3 +206,56 @@ if (form) {
     }, 1000);
   });
 }
+
+const timelineItems = document.querySelectorAll(".timeline-item");
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  timelineItems.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggerBottom) {
+      item.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+/* =========================
+   EXPERIENCE MODALS
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modalButtons = document.querySelectorAll(".open-modal");
+    const modals = document.querySelectorAll(".modal-overlay");
+    const closeButtons = document.querySelectorAll(".close-modal");
+  
+    modalButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const modalId = button.getAttribute("data-modal");
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add("active");
+        }
+      });
+    });
+  
+    closeButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        button.closest(".modal-overlay").classList.remove("active");
+      });
+    });
+  
+    modals.forEach(modal => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+    });
+  
+  });
