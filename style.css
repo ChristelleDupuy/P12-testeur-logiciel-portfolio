@@ -125,27 +125,6 @@ body.light-mode .form-group label {
     text-transform: uppercase;
   }
 
-  .theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .theme-icon {
-    font-size: 0.95rem;
-    color: #888;
-    transition: color 0.3s ease;
-  }
-
-  body:not(.light-mode) .theme-icon {
-    color: #c5c5c5;
-  }
-
-  body.light-mode .theme-icon {
-    color: #b33939;
-    display: none;
-  }
-
 #theme-toggle {
     border: none;
     background: transparent;
@@ -167,15 +146,6 @@ body.light-mode .form-group label {
 #theme-toggle:active {
     transform: scale(0.95);
 }
-
-.theme-switch {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .theme-switch input {
-    display: none;
-  }
   
   .switch {
     width: 44px;
@@ -210,19 +180,6 @@ body.light-mode .form-group label {
   body.light-mode .switch {
     background-color: #e4e4e4;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
-  }
-
-  .theme-switch input:checked + .switch {
-    background-color: #dcdcdc;
-  }
-  
-  .theme-switch input:checked + .switch::before {
-    transform: translateX(18px);
-    background-color: var(--accent-color);
-  }
-
-  body.light-mode .theme-icon {
-    color: #666;
   }
 
   /* Slider */
@@ -570,6 +527,11 @@ body.light-mode .skill-item img {
     transform: translateY(-5px);
     border-color: var(--accent-color);
     box-shadow: 0 10px 30px rgba(232, 93, 93, 0.15);
+  }
+
+  body.light-mode .timeline-content:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 30px rgba(179, 57, 57, 0.15);
   }
   
   .timeline-content h3 {

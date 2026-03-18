@@ -113,16 +113,6 @@ if (localStorage.getItem("theme") === "light") {
   toggle.checked = true;
 }
 
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    document.body.classList.add("light-mode");
-    localStorage.setItem("theme", "light");
-  } else {
-    document.body.classList.remove("light-mode");
-    localStorage.setItem("theme", "dark");
-  }
-});
-
 const tooltip = document.getElementById("theme-tooltip");
 
 function updateTooltip() {
@@ -320,4 +310,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-moveIndicator(links[0]);
+if (links.length > 0) {
+    moveIndicator(links[0]);
+  }
