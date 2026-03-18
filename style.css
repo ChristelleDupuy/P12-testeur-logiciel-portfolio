@@ -19,9 +19,64 @@ body.light-mode .navbar {
     background-color: #ffffff;
 }
 
+body.light-mode .footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+  }
+
 body.light-mode .nav-link,
 body.light-mode .navbar-brand {
     color: #1e1e1e !important;
+}
+
+body.light-mode .timeline-content {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+
+  body.light-mode .timeline::after {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(179, 57, 57, 0.6),
+      transparent
+    );
+  }
+  
+  body.light-mode .timeline-content h4 {
+    color: #777;
+  }
+  
+  body.light-mode .timeline-content p,
+  body.light-mode .timeline-content li {
+    color: #444;
+  }
+
+  body.light-mode .custom-modal {
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  
+  body.light-mode .custom-modal h3 {
+    color: #666;
+  }
+  
+  body.light-mode .highlight-title {
+    color: var(--accent-color);
+  }
+
+  body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  background: #ffffff;
+  color: #1e1e1e;
+  border: 1px solid #ddd;
+}
+
+body.light-mode .form-group label {
+  color: #555;
 }
 
 .nav-link {
@@ -70,6 +125,27 @@ body.light-mode .navbar-brand {
     text-transform: uppercase;
   }
 
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .theme-icon {
+    font-size: 0.95rem;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+
+  body:not(.light-mode) .theme-icon {
+    color: #c5c5c5;
+  }
+
+  body.light-mode .theme-icon {
+    color: #b33939;
+    display: none;
+  }
+
 #theme-toggle {
     border: none;
     background: transparent;
@@ -79,6 +155,11 @@ body.light-mode .navbar-brand {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
 #theme-toggle:hover {
     transform: scale(1.1);
 }
@@ -86,6 +167,130 @@ body.light-mode .navbar-brand {
 #theme-toggle:active {
     transform: scale(0.95);
 }
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .switch {
+    width: 44px;
+    height: 24px;
+    background-color: #2f343d;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  body.light-mode .switch {
+    background-color: #e4e4e4;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+
+  .theme-switch input:checked + .switch {
+    background-color: #dcdcdc;
+  }
+  
+  .theme-switch input:checked + .switch::before {
+    transform: translateX(18px);
+    background-color: var(--accent-color);
+  }
+
+  body.light-mode .theme-icon {
+    color: #666;
+  }
+
+  /* Slider */
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #2f343d;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Light mode */
+  input:checked + .slider {
+    background-color: #d9d9d9;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  
+  /* Hover subtil */
+  .switch:hover .slider {
+    box-shadow: 0 0 0 3px rgba(179, 57, 57, 0.18);
+  }
+
+  .theme-tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .theme-tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f242d;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  
+  /* En light mode */
+  body.light-mode .theme-tooltip {
+    background-color: #2f343d;
+  }
+  
+  /* Apparition immédiate */
+  .theme-tooltip-container:hover .theme-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(4px);
+  }
 
 /******* GENERAL *******/
 /* spacing on all sections */

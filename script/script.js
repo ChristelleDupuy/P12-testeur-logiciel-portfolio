@@ -109,20 +109,42 @@ createPortfolioFromJSON();
 const toggle = document.getElementById("theme-toggle");
 
 if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-    toggle.textContent = "☀️";
+  document.body.classList.add("light-mode");
+  toggle.checked = true;
 }
 
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    document.body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.body.classList.remove("light-mode");
+    localStorage.setItem("theme", "dark");
+  }
+});
 
-    if (document.body.classList.contains("light-mode")) {
-        toggle.textContent = "🌙";
-        localStorage.setItem("theme", "light");
-    } else {
-        toggle.textContent = "☀️";
-        localStorage.setItem("theme", "dark");
-    }
+const tooltip = document.getElementById("theme-tooltip");
+
+function updateTooltip() {
+  if (document.body.classList.contains("light-mode")) {
+    tooltip.textContent = "Passer en mode sombre";
+  } else {
+    tooltip.textContent = "Passer en mode clair";
+  }
+}
+
+updateTooltip();
+
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    document.body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.body.classList.remove("light-mode");
+    localStorage.setItem("theme", "dark");
+  }
+
+  updateTooltip();
 });
 
 /* =========================
