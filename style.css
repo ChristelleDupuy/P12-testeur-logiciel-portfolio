@@ -24,6 +24,52 @@ body.light-mode .navbar-brand {
     color: #1e1e1e !important;
 }
 
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--accent-color) !important;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+
+  .navbar-nav {
+    position: relative;
+  }
+  
+  .nav-indicator {
+    position: absolute;
+    bottom: 8px;
+    height: 2px;
+    background: var(--accent-color);
+    transition: all 0.35s ease;
+    border-radius: 2px;
+  }
+
+  .active-link {
+    color: var(--accent-color) !important;
+  }
+
+  .accent-title {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
 #theme-toggle {
     border: none;
     background: transparent;
@@ -356,27 +402,6 @@ body.light-mode .skill-item img {
     transform: translateX(-50%);
   }
 
-.cv-button {
-    padding: 12px 28px;
-    border-radius: 40px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--text-color);
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.2),
-        rgba(255,255,255,0.08)
-    );
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.2);
-    transition: all 0.3s ease;
-}
-
-.cv-button:hover {
-    transform: translateY(-3px);
-    background: var(--accent-color);
-    color: white;
-}
 
 .portfolio-cta {
     text-align: center;
@@ -459,23 +484,28 @@ body.light-mode .skill-item img {
     border-color: #e85d5d;
     box-shadow: 0 0 0 2px rgba(232, 93, 93, 0.2);
   }
-  
-  .contact-btn {
-    padding: 16px 40px;
-    border-radius: 14px;
-    border: 2px solid #e85d5d;
+
+  .primary-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
     background: transparent;
-    color: #e85d5d;
-    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: block;
-    margin: 40px auto 0 auto;
+    text-decoration: none;
+    display: inline-block;
   }
   
-  .contact-btn:hover {
-    background: #e85d5d;
+  .primary-btn:hover {
+    background: var(--accent-color);
     color: white;
+  }
+
+  #contact .primary-btn {
+    display: block;
+    margin: 40px auto 0 auto;
   }
   
   .form-success {

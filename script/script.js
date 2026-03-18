@@ -259,3 +259,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
   });
+
+  const nav = document.querySelector(".navbar-nav");
+const links = document.querySelectorAll(".nav-link");
+
+const indicator = document.createElement("div");
+indicator.classList.add("nav-indicator");
+nav.appendChild(indicator);
+
+function moveIndicator(element) {
+  const rect = element.getBoundingClientRect();
+  const parentRect = nav.getBoundingClientRect();
+
+  indicator.style.width = rect.width + "px";
+  indicator.style.left = rect.left - parentRect.left + "px";
+}
+
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    moveIndicator(link);
+  });
+});
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  document.querySelectorAll("section").forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  links.forEach(link => {
+    if (link.getAttribute("href").includes(current)) {
+      moveIndicator(link);
+    }
+  });
+});
+
+moveIndicator(links[0]);
