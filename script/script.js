@@ -103,7 +103,6 @@ function createPortfolioFromJSON() {
 handleNavbarScroll();
 handleNavbarCollapse();
 createSkillsFromJSON();
-createPortfolioFromJSON();
 
 // Dark / Light mode toggle
 const toggle = document.getElementById("theme-toggle");
