@@ -4,11 +4,50 @@ import projects from "../data/projects";
 
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [filter, setFilter] = useState("all");
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) =>
+          project.category.includes(filter)
+        );
 
   return (
     <>
+      
+      <div className="portfolio-filters">
+  <button
+    className={filter === "dev" ? "active" : ""}
+    onClick={() => setFilter("dev")}
+  >
+    Développement
+  </button>
+
+  <button
+    className={filter === "test" ? "active" : ""}
+    onClick={() => setFilter("test")}
+  >
+    Test
+  </button>
+
+  <button
+    className={filter === "gestion" ? "active" : ""}
+    onClick={() => setFilter("gestion")}
+  >
+    Gestion de projet
+  </button>
+
+  <button
+    className={filter === "all" ? "active" : ""}
+    onClick={() => setFilter("all")}
+  >
+    Tous
+  </button>
+</div>
+
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <ProjectCard
             key={index}
             {...project}

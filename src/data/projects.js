@@ -9,6 +9,7 @@ const projects = [
     title: "Riding Cities",
     image: riding,
     context: "Mise à jour d’une page web existante",
+    category: ["dev"],
     details: {
       resume: "Création d’une section web à partir d’une maquette Figma, pour une association.",
       objectif: "Concevoir une section accessible et responsive à intégrer dans un site existant.",
@@ -25,14 +26,15 @@ const projects = [
     title: "Booki",
     image: booki,
     context: "Site de recherche d’hébergements",
+    category: ["dev"],
     details: {
       resume: "Intégration d’une interface responsive pour un site de réservation.",
       objectif: "Reproduire fidèlement une maquette et assurer l’adaptabilité mobile.",
       travail: [
         "Intégration HTML/CSS complète",
-        "Responsive design (mobile, tablette, desktop)",
-        "Utilisation de Flexbox et Grid",
-        "Optimisation visuelle et UX"
+        "Responsive design",
+        "Flexbox & Grid",
+        "Optimisation UX"
       ]
     }
   },
@@ -41,14 +43,15 @@ const projects = [
     title: "JSE Avocats",
     image: placeholder,
     context: "Tests fonctionnels d’un site web",
+    category: ["test"],
     details: {
-      resume: "Réalisation d’une campagne de tests pour un site d’avocats.",
-      objectif: "Identifier les anomalies et garantir la qualité du produit.",
+      resume: "Campagne de tests complète.",
+      objectif: "Garantir la qualité du site.",
       travail: [
-        "Tests exploratoires et fonctionnels",
-        "Rédaction de cas de tests",
-        "Détection et remontée des bugs",
-        "Rédaction d’un cahier de recette"
+        "Tests exploratoires",
+        "Cas de tests",
+        "Remontée de bugs",
+        "Cahier de recette"
       ]
     }
   },
@@ -57,14 +60,15 @@ const projects = [
     title: "724events",
     image: placeholder,
     context: "Audit et tests d’un site événementiel",
+    category: ["test"],
     details: {
-      resume: "Analyse complète du site et identification des problèmes.",
-      objectif: "Améliorer la qualité et les performances du site.",
+      resume: "Analyse complète du site.",
+      objectif: "Améliorer qualité et performances.",
       travail: [
         "Tests fonctionnels",
-        "Analyse des performances",
-        "Rédaction de rapports de bugs",
-        "Recommandations d’amélioration"
+        "Analyse perf",
+        "Rapports bugs",
+        "Reco"
       ]
     }
   },
@@ -73,14 +77,15 @@ const projects = [
     title: "Print it",
     image: placeholder,
     context: "Ajout de fonctionnalités JavaScript",
+    category: ["dev"],
     details: {
-      resume: "Implémentation d’un carrousel dynamique.",
-      objectif: "Améliorer l’interactivité du site.",
+      resume: "Ajout d’un carrousel.",
+      objectif: "Rendre le site interactif.",
       travail: [
-        "Manipulation du DOM",
-        "Gestion d’événements",
-        "Création d’un slider",
-        "Logique JavaScript dynamique"
+        "DOM",
+        "Events",
+        "Slider",
+        "JS dynamique"
       ]
     }
   },
@@ -89,14 +94,15 @@ const projects = [
     title: "Sophie Bluel",
     image: placeholder,
     context: "Site dynamique avec API",
+    category: ["dev"],
     details: {
-      resume: "Connexion à une API pour gérer des projets.",
-      objectif: "Créer une interface dynamique avec authentification.",
+      resume: "Connexion API + admin.",
+      objectif: "Site dynamique.",
       travail: [
-        "Appels API (fetch)",
-        "Authentification utilisateur",
-        "Gestion dynamique du DOM",
-        "Ajout / suppression de contenus"
+        "Fetch API",
+        "Auth",
+        "DOM dynamique",
+        "CRUD"
       ]
     }
   },
@@ -104,15 +110,16 @@ const projects = [
   {
     title: "Kasa",
     image: kasa,
-    context: "Application React de location",
+    context: "Application React",
+    category: ["dev"],
     details: {
-      resume: "Développement d’une application complète avec React.",
-      objectif: "Créer une app moderne avec routing.",
+      resume: "App React complète.",
+      objectif: "Routing + composants.",
       travail: [
-        "React (components, props, state)",
-        "React Router",
-        "Gestion des données JSON",
-        "Création de composants réutilisables"
+        "React",
+        "Router",
+        "Props",
+        "Composants"
       ]
     }
   },
@@ -120,15 +127,16 @@ const projects = [
   {
     title: "Menu Maker by Qwenta",
     image: placeholder,
-    context: "Spécifications techniques & gestion projet",
+    context: "Spécifications techniques",
+    category: ["gestion"],
     details: {
-      resume: "Conception d’un outil de création de menus.",
-      objectif: "Structurer techniquement un projet complexe.",
+      resume: "Conception d’un outil.",
+      objectif: "Structurer un projet.",
       travail: [
-        "Rédaction de spécifications techniques",
-        "Choix des solutions techniques",
-        "Organisation via Kanban",
-        "Analyse des besoins utilisateurs"
+        "Specs",
+        "Choix techniques",
+        "Kanban",
+        "Analyse besoins"
       ]
     }
   },
@@ -136,15 +144,16 @@ const projects = [
   {
     title: "Eco Bliss Bath",
     image: placeholder,
-    context: "Débogage et optimisation d’un site existant",
+    context: "Débogage et optimisation",
+    category: ["dev", "test"],
     details: {
-      resume: "Analyse et correction d’un site e-commerce présentant des dysfonctionnements.",
-      objectif: "Identifier les anomalies et améliorer la performance globale du site.",
+      resume: "Correction de bugs.",
+      objectif: "Améliorer performance.",
       travail: [
-        "Identification et correction de bugs JavaScript",
-        "Optimisation des performances",
-        "Amélioration SEO",
-        "Tests et validation des fonctionnalités"
+        "Debug JS",
+        "Perf",
+        "SEO",
+        "Tests"
       ]
     }
   },
@@ -152,15 +161,16 @@ const projects = [
   {
     title: "Tomsen by PayForge",
     image: placeholder,
-    context: "Stratégie de test complète",
+    context: "Stratégie de test",
+    category: ["test", "gestion"],
     details: {
-      resume: "Création d’une stratégie de test pour un produit financier.",
-      objectif: "Assurer la qualité d’un produit critique.",
+      resume: "Stratégie complète.",
+      objectif: "Produit fiable.",
       travail: [
-        "Revue des exigences",
-        "Plan de test détaillé",
-        "Identification des risques",
-        "Organisation des tests par sprint"
+        "Revue exigences",
+        "Plan test",
+        "Risques",
+        "Organisation"
       ]
     }
   },
@@ -169,14 +179,15 @@ const projects = [
     title: "Portfolio",
     image: placeholder,
     context: "Création de mon portfolio",
+    category: ["dev"],
     details: {
-      resume: "Développement d’un portfolio moderne.",
-      objectif: "Mettre en valeur mes compétences.",
+      resume: "Portfolio moderne.",
+      objectif: "Me valoriser.",
       travail: [
-        "Design UI/UX",
-        "Développement React",
-        "Animations et interactions",
-        "Optimisation responsive"
+        "UI/UX",
+        "React",
+        "Animations",
+        "Responsive"
       ]
     }
   }
