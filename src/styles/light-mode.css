@@ -1,0 +1,128 @@
+html.light-mode {
+    --bg-color: #f5f5f2;
+    --surface-color: #ffffff;
+    --text-color: #1e1e1e;
+    --border-color: #e6e6e6;
+  }
+  
+  html.light-mode .footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+  }
+  
+  html.light-mode .nav-link,
+  html.light-mode .navbar-brand {
+    color: #1e1e1e !important;
+  }
+  
+  html.light-mode .timeline-content {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+  
+  html.light-mode .timeline::after {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(179, 57, 57, 0.6),
+      transparent
+    );
+  }
+  
+  html.light-mode .timeline-content h4 {
+    color: var(--text-muted);
+  }
+  
+  html.light-mode .timeline-content p,
+  html.light-mode .timeline-content li {
+    color: #444;
+  }
+  
+  html.light-mode .custom-modal {
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  
+  html.light-mode .custom-modal h3 {
+    color: #666;
+  }
+  
+  html.light-mode .highlight-title {
+    color: var(--accent-color);
+  }
+  
+  html.light-mode .form-group input,
+  html.light-mode .form-group textarea {
+  background: #ffffff;
+  color: #1e1e1e;
+  border: 1px solid #ddd;
+  }
+  
+  html.light-mode .form-group label {
+  color: #555;
+  }  
+  
+  html.light-mode .switch {
+    background-color: #e4e4e4;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  }     
+  
+  html.light-mode .theme-tooltip {
+    background-color: #2f343d;
+  }       
+  
+  html.light-mode .skill-item {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  }
+  
+  html.light-mode .skill-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(168, 50, 50, 0.12);
+  }
+  
+  html.light-mode .skill-item img {
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+  }
+  
+  html.light-mode .portfolio-react {
+    background: transparent;
+  }         
+
+  html.light-mode .skill-item.dev {
+    border: 1px solid rgba(52, 152, 219, 0.35);
+  }
+  
+  html.light-mode .skill-item.dev:hover {
+    border-color: rgba(52, 152, 219, 0.8);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.15);
+  }
+  
+  html.light-mode .skill-item.qa {
+    border: 1px solid rgba(231, 76, 60, 0.35);
+  }
+  
+  html.light-mode .skill-item.qa:hover {
+    border-color: rgba(231, 76, 60, 0.8);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
+  }
+  
+  html.light-mode .skill-item.tools {
+    border: 1px solid rgba(46, 204, 113, 0.35);
+  }
+  
+  html.light-mode .skill-item.tools:hover {
+    border-color: rgba(46, 204, 113, 0.8);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.15);
+  
+  } 
+  
+  html.light-mode .timeline-content:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 30px rgba(179, 57, 57, 0.15);
+  }

@@ -1,5 +1,5 @@
 // Function to add the "navbarDark" class to the navbar on scroll
-function handleNavbarScroll() {
+function handleNavbarScroll(){
     const header = document.querySelector(".navbar");
     window.onscroll = function () {
         const top = window.scrollY;
@@ -40,7 +40,7 @@ function createSkillsFromJSON() {
                 card.innerHTML = `
                     <div class="card skillsText">
                         <div class="card-body">
-                            <img src="./images/${item.image}" />
+                            <img src="/images/${item.image}" />
                             <h4 class="card-title mt-3">${item.title}</h4>
                             <p class="card-text mt-3">${item.text}</p>
                         </div>
@@ -102,7 +102,6 @@ function createPortfolioFromJSON() {
 // Call the functions to execute the code
 handleNavbarScroll();
 handleNavbarCollapse();
-createSkillsFromJSON();
 
 // Dark / Light mode toggle
 const toggle = document.getElementById("theme-toggle");
@@ -142,34 +141,34 @@ toggle.addEventListener("change", () => {
 
 const skills = [
     // DEV
-    { name: "CSS3", image: "../images/css3.svg", type: "dev" },
-    { name: "HTML5", image: "../images/html5.svg", type: "dev" },
-    { name: "JavaScript", image: "../images/javascript.svg", type: "dev" },
-    { name: "React", image: "../images/react.svg", type: "dev" },
-    { name: "Responsive Design", image: "../images/responsive.png", type: "dev" },
-    { name: "WordPress", image: "../images/wordpress.svg", type: "dev" },
+    { name: "CSS3", image: "/images/css3.svg", type: "dev", "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS" },
+    { name: "HTML5", image: "/images/html5.svg", type: "dev" },
+    { name: "JavaScript", image: "/images/javascript.svg", type: "dev" },
+    { name: "React", image: "/images/react.svg", type: "dev" },
+    { name: "Responsive Design", image: "/images/responsive.png", type: "dev" },
+    { name: "WordPress", image: "/images/wordpress.svg", type: "dev" },
   
     // QA
-    { name: "Cypress", image: "../images/cypress.svg", type: "qa" },
-    { name: "Postman", image: "../images/postman.svg", type: "qa" },
-    { name: "Swagger", image: "../images/swagger.svg", type: "qa" },
-    { name: "Stratégie de test", image: "../images/test.png", type: "qa" },
-    { name: "Optimisation & Debug", image: "../images/optimisation-et-debug.png", type: "qa" },
+    { name: "Cypress", image: "/images/cypress.svg", type: "qa" },
+    { name: "Postman", image: "/images/postman.svg", type: "qa" },
+    { name: "Swagger", image: "/images/swagger.svg", type: "qa" },
+    { name: "Stratégie de test", image: "/images/test.png", type: "qa" },
+    { name: "Optimisation & Debug", image: "/images/optimisation-et-debug.png", type: "qa" },
   
     // TOOLS
-    { name: "Git", image: "../images/git.svg", type: "tools" },
-    { name: "GitHub", image: "../images/github.svg", type: "tools" },
-    { name: "Docker", image: "../images/docker.svg", type: "tools" },
-    { name: "Jira", image: "../images/jira.svg", type: "tools" },
-    { name: "Confluence", image: "../images/confluence.svg", type: "tools" },
-    { name: "Notion", image: "../images/notion.svg", type: "tools" },
-    { name: "Trello", image: "../images/trello.svg", type: "tools" },
-    { name: "Slack", image: "../images/slack.svg", type: "tools" },
-    { name: "Figma", image: "../images/figma.svg", type: "tools" },
-    { name: "Miro", image: "../images/miro.png", type: "tools" },
-    { name: "Visual Studio Code", image: "../images/vscode.svg", type: "tools" },
-    { name: "Agile / Scrum", image: "../images/agile.png", type: "tools" },
-    { name: "Gestion de projet", image: "../images/gestion-de-projet.png", type: "tools" }
+    { name: "Git", image: "/images/git.svg", type: "tools" },
+    { name: "GitHub", image: "/images/github.svg", type: "tools" },
+    { name: "Docker", image: "/images/docker.svg", type: "tools" },
+    { name: "Jira", image: "/images/jira.svg", type: "tools" },
+    { name: "Confluence", image: "/images/confluence.svg", type: "tools" },
+    { name: "Notion", image: "/images/notion.svg", type: "tools" },
+    { name: "Trello", image: "/images/trello.svg", type: "tools" },
+    { name: "Slack", image: "/images/slack.svg", type: "tools" },
+    { name: "Figma", image: "/images/figma.svg", type: "tools" },
+    { name: "Miro", image: "/images/miro.png", type: "tools" },
+    { name: "Visual Studio Code", image: "/images/vscode.svg", type: "tools" },
+    { name: "Agile / Scrum", image: "/images/agile.png", type: "tools" },
+    { name: "Gestion de projet", image: "/images/gestion-de-projet.png", type: "tools" }
   ];
   
   function generateSkills() {
@@ -182,9 +181,14 @@ const skills = [
       div.classList.add("skill-item", skill.type);
   
       div.innerHTML = `
-        <img src="${skill.image}" alt="${skill.name}">
-        <span>${skill.name}</span>
-      `;
+  <img src="${skill.image}" alt="${skill.name}">
+  <span>${skill.name}</span>
+
+  <div class="skill-popup">
+    <strong>${skill.name}</strong>
+    <p>${skill.text || ""}</p>
+  </div>
+`;
   
       track.appendChild(div);
     });

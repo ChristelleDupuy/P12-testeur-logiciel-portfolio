@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '../style.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Portfolio from "./components/Portfolio";
+import "./styles/variables.css";
+import "./styles/base.css";
+import "./styles/layout.css";
+import "./styles/components.css";
+import "./styles/light-mode.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const container = document.getElementById("react-portfolio");
+
+if (container) {
+  ReactDOM.createRoot(container).render(
+    <React.StrictMode>
+      <Portfolio />
+    </React.StrictMode>
+  );
+}
