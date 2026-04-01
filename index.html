@@ -306,7 +306,7 @@
                         <a class="nav-link" href="#skills">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#projects">Projets</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#cv">CV</a>
@@ -516,14 +516,14 @@
         <div class="container">
             <h2 class="text-center">Mes compétences</h2>
             <div class="skills-carousel">
-                <div class="skills-track"id="skills-track"></div>
+                <div class="skills-track" id="skills-track"></div>
             </div>
         </div>
     </section>
                  
     <!-- portfolio section-->
-    <section id="portfolio">
-        <h2 class="text-center">Portfolio</h2>
+    <section id="projects">
+        <h2 class="text-center">Mes Projets</h2>
         <div id="react-portfolio"></div>
       </section>
 
@@ -544,31 +544,39 @@
     </div>
 </section>
 
-    <!-- contact section-->
-    <section id="contact">
-        <div class="container mt-3 contactContent">
-            <h2 class="text-center">Contact</h2>
-      
-          <div class="contact-info">
-            <p>📞 <a href="tel:0770320693">07 70 32 06 93</a></p>
-      
-            <p>
-              📧 <a href="mailto:christelle.dupuy@icloud.com">
-                christelle.dupuy@icloud.com
-              </a>
-            </p>
-      
-            <p class="contact-availability">
-              Disponible pour échanger autour de vos projets
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- contact section -->
+<section id="contact">
+    <div class="container mt-3 contactContent">
+      <h2 class="text-center">Contact</h2>
+  
+      <div class="contact-info">
+        <p>
+          📞 
+          <button onclick="this.nextElementSibling.style.display='inline'; this.style.display='none'">
+            Afficher le numéro
+          </button>
+          <a href="tel:0770320693" style="display:none;">07 70 32 06 93</a>
+        </p>
+  
+        <p>
+          📧 
+          <button onclick="this.nextElementSibling.style.display='inline'; this.style.display='none'">
+            Afficher l’email
+          </button>
+          <a href="mailto:christelle.dupuy@icloud.com" style="display:none;">
+            christelle.dupuy@icloud.com
+          </a>
+        </p>
+  
+        <p class="contact-availability">
+          Disponible pour échanger autour de vos projets
+        </p>
+      </div>
+    </div>
+  </section>
 
     <!-- load javascript after loading all html content -->
     <script src="script/script.js"></script>
-    
-    <script type="module" src="./assets-react/index-D6LPpCJI.js"></script>
 
     <footer class="footer">
         <div class="footer-container">
