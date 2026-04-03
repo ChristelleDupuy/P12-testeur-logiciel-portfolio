@@ -8,187 +8,254 @@ const projects = [
   {
     title: "Riding Cities",
     image: riding,
-    context: "Mise à jour d’une page web existante",
     category: ["dev"],
     details: {
-      resume: "Création d’une section web à partir d’une maquette Figma, pour une association.",
-      objectif: "Concevoir une section accessible et responsive à intégrer dans un site existant.",
+      resume: "Création d’une section web à partir d’une maquette Figma dans un contexte de formation professionnalisante.",
+      objectif: "Intégrer une section accessible et responsive en respectant fidèlement une maquette.",
       travail: [
-        "Structuration du contenu en HTML sémantique",
-        "Intégration en CSS à partir d’un design Figma",
-        "Ajout d’interactions simples (hover, liens)",
+        "Structuration HTML sémantique",
+        "Intégration CSS à partir d’une maquette",
+        "Ajout d’interactions simples",
         "Respect des bonnes pratiques d’accessibilité"
-      ]
+      ],
+      learned: [
+        "Respect d’une maquette",
+        "Organisation du code HTML/CSS",
+        "Accessibilité web"
+      ],
+      stack: ["HTML", "CSS"]
     }
   },
 
   {
     title: "Booki",
     image: booki,
-    context: "Site de recherche d’hébergements",
     category: ["dev"],
     details: {
-      resume: "Intégration d’une interface responsive pour un site de réservation.",
-      objectif: "Reproduire fidèlement une maquette et assurer l’adaptabilité mobile.",
+      resume: "Création d’un site web de recherche d’hébergements à partir d’une maquette fournie.",
+      objectif: "Intégrer fidèlement une maquette en HTML/CSS et garantir un affichage responsive.",
       travail: [
-        "Intégration HTML/CSS complète",
-        "Responsive design",
-        "Flexbox & Grid",
-        "Optimisation UX"
-      ]
+        "Structuration complète en HTML sémantique",
+        "Intégration précise des styles CSS",
+        "Mise en place du responsive design",
+        "Optimisation des espacements et de l’affichage",
+        "Tests sur différents supports"
+      ],
+      learned: [
+        "Structure HTML claire et accessible",
+        "Gestion du responsive design",
+        "Organisation du CSS",
+        "Rigueur dans le respect d’une maquette"
+      ],
+      stack: ["HTML", "CSS"]
     }
   },
 
   {
     title: "JSE Avocats",
     image: placeholder,
-    context: "Tests fonctionnels d’un site web",
     category: ["test"],
     details: {
-      resume: "Campagne de tests complète.",
-      objectif: "Garantir la qualité du site.",
+      resume: "Réalisation d’une campagne complète de tests sur un site web.",
+      objectif: "Garantir la qualité fonctionnelle du produit avant mise en production.",
       travail: [
+        "Analyse des exigences",
         "Tests exploratoires",
-        "Cas de tests",
-        "Remontée de bugs",
-        "Cahier de recette"
-      ]
+        "Rédaction de cas de tests",
+        "Remontée des anomalies",
+        "Création d’un cahier de recette"
+      ],
+      learned: [
+        "Méthodologie de test logiciel",
+        "Analyse fonctionnelle",
+        "Rigueur dans la documentation",
+        "Vision qualité orientée utilisateur"
+      ],
+      stack: ["Tests manuels", "Jira", "Documentation"]
     }
   },
 
   {
     title: "724events",
     image: placeholder,
-    context: "Audit et tests d’un site événementiel",
     category: ["test"],
     details: {
-      resume: "Analyse complète du site.",
-      objectif: "Améliorer qualité et performances.",
+      resume: "Audit complet d’un site événementiel.",
+      objectif: "Identifier les axes d’amélioration en qualité et performance.",
       travail: [
         "Tests fonctionnels",
-        "Analyse perf",
-        "Rapports bugs",
-        "Reco"
-      ]
+        "Analyse des performances",
+        "Rapports de bugs",
+        "Recommandations d’amélioration"
+      ],
+      learned: [
+        "Analyse de performance web",
+        "Priorisation des anomalies",
+        "Rédaction de rapports"
+      ],
+      stack: ["Lighthouse", "Tests fonctionnels", "Reporting"]
     }
   },
 
   {
     title: "Print it",
     image: placeholder,
-    context: "Ajout de fonctionnalités JavaScript",
     category: ["dev"],
     details: {
-      resume: "Ajout d’un carrousel.",
-      objectif: "Rendre le site interactif.",
+      resume: "Ajout de fonctionnalités dynamiques en JavaScript.",
+      objectif: "Améliorer l’expérience utilisateur avec des interactions.",
       travail: [
-        "DOM",
-        "Events",
-        "Slider",
-        "JS dynamique"
-      ]
-    }
+        "Manipulation du DOM",
+        "Gestion des événements",
+        "Création d’un carrousel",
+        "Ajout d’interactions utilisateur"
+      ],
+      learned: [
+        "Compréhension du DOM",
+        "Gestion des événements",
+        "Logique JavaScript",
+        "Interactions dynamiques"
+      ],
+      stack: ["JavaScript", "DOM"]
+    },
+    github: "https://github.com/ChristelleDupuy/print-it-js"
   },
 
   {
     title: "Sophie Bluel",
     image: placeholder,
-    context: "Site dynamique avec API",
     category: ["dev"],
     details: {
-      resume: "Connexion API + admin.",
-      objectif: "Site dynamique.",
+      resume: "Création d’un site dynamique avec API.",
+      objectif: "Permettre la gestion d’un portfolio via une interface admin.",
       travail: [
-        "Fetch API",
-        "Auth",
-        "DOM dynamique",
-        "CRUD"
-      ]
-    }
+        "Connexion à une API",
+        "Gestion de l’authentification",
+        "Manipulation dynamique du DOM",
+        "Implémentation CRUD"
+      ],
+      learned: [
+        "Utilisation d’API REST",
+        "Gestion des appels réseau",
+        "Sécurisation d’une interface",
+        "DOM dynamique"
+      ],
+      stack: ["JavaScript", "API", "Fetch"]
+    },
+    github: "https://github.com/ChristelleDupuy/portfolio-sophie-bluel"
   },
 
   {
     title: "Kasa",
     image: kasa,
-    context: "Application React",
     category: ["dev"],
     details: {
-      resume: "App React complète.",
-      objectif: "Routing + composants.",
+      resume: "Développement d’une application web en React.",
+      objectif: "Créer une application dynamique avec navigation fluide.",
       travail: [
-        "React",
-        "Router",
-        "Props",
-        "Composants"
-      ]
-    }
+        "Création de composants React",
+        "Mise en place du routing",
+        "Gestion des props",
+        "Structuration du projet"
+      ],
+      learned: [
+        "Architecture React",
+        "Routing SPA",
+        "Réutilisation des composants",
+        "Organisation du code"
+      ],
+      stack: ["React", "React Router", "JavaScript"]
+    },
+    github: "https://github.com/ChristelleDupuy/Kasa"
   },
 
   {
     title: "Menu Maker by Qwenta",
     image: placeholder,
-    context: "Spécifications techniques",
     category: ["gestion"],
     details: {
-      resume: "Conception d’un outil.",
-      objectif: "Structurer un projet.",
+      resume: "Rédaction de spécifications techniques pour une application.",
+      objectif: "Structurer un projet web et organiser son développement.",
       travail: [
-        "Specs",
-        "Choix techniques",
-        "Kanban",
-        "Analyse besoins"
-      ]
+        "Rédaction des spécifications",
+        "Organisation en Kanban",
+        "Analyse des besoins",
+        "Préparation de présentation"
+      ],
+      learned: [
+        "Analyse des besoins utilisateurs",
+        "Organisation Agile",
+        "Rédaction technique"
+      ],
+      stack: ["Notion", "Kanban", "Spécifications"]
     }
   },
 
   {
     title: "Eco Bliss Bath",
     image: placeholder,
-    context: "Débogage et optimisation",
     category: ["dev", "test"],
     details: {
-      resume: "Correction de bugs.",
-      objectif: "Améliorer performance.",
+      resume: "Débogage et optimisation d’un site web.",
+      objectif: "Améliorer les performances et corriger les anomalies.",
       travail: [
-        "Debug JS",
-        "Perf",
-        "SEO",
-        "Tests"
-      ]
-    }
+        "Correction de bugs",
+        "Optimisation performance",
+        "Amélioration SEO",
+        "Tests fonctionnels"
+      ],
+      learned: [
+        "Debug JavaScript",
+        "Optimisation performance",
+        "Analyse SEO"
+      ],
+      stack: ["JavaScript", "SEO", "Performance"]
+    },
+    github: "https://github.com/ChristelleDupuy/Eco-Bliss-Bath-V2"
   },
 
   {
     title: "Tomsen by PayForge",
     image: placeholder,
-    context: "Stratégie de test",
     category: ["test", "gestion"],
     details: {
-      resume: "Stratégie complète.",
-      objectif: "Produit fiable.",
+      resume: "Création d’une stratégie de test complète.",
+      objectif: "Garantir la qualité d’un produit financier.",
       travail: [
-        "Revue exigences",
-        "Plan test",
-        "Risques",
-        "Organisation"
-      ]
+        "Revue des exigences",
+        "Stratégie de test",
+        "Analyse des risques",
+        "Planification"
+      ],
+      learned: [
+        "Stratégie QA",
+        "Analyse des risques",
+        "Organisation des tests"
+      ],
+      stack: ["Test strategy", "QA", "Documentation"]
     }
   },
 
   {
     title: "Portfolio",
     image: placeholder,
-    context: "Création de mon portfolio",
     category: ["dev"],
     details: {
-      resume: "Portfolio moderne.",
-      objectif: "Me valoriser.",
+      resume: "Création de mon portfolio professionnel.",
+      objectif: "Mettre en valeur mes compétences en QA et front-end.",
       travail: [
-        "UI/UX",
-        "React",
-        "Animations",
-        "Responsive"
-      ]
+        "Conception UI/UX",
+        "Développement React",
+        "Création de composants",
+        "Optimisation UX"
+      ],
+      learned: [
+        "Structuration d’un projet complet",
+        "Création d’interface moderne",
+        "Gestion des composants React",
+        "Expérience utilisateur"
+      ],
+      stack: ["React", "CSS", "JavaScript"]
     }
   }
 ];
