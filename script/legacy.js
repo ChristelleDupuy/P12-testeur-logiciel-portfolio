@@ -29,7 +29,7 @@ if (toggle) {
 }
 
 const skills = [
-  { name: "CSS3", image: "/images/css3.svg", type: "dev", text: "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS" },
+  { name: "CSS3", image: "/images/css3.svg", type: "dev" },
   { name: "HTML5", image: "/images/html5.svg", type: "dev" },
   { name: "JavaScript", image: "/images/javascript.svg", type: "dev" },
   { name: "React", image: "/images/react.svg", type: "dev" },
@@ -70,10 +70,6 @@ function generateSkills() {
     div.innerHTML = `
       <img src="${skill.image}" alt="${skill.name}">
       <span>${skill.name}</span>
-      <div class="skill-popup">
-        <strong>${skill.name}</strong>
-        <p>${skill.text || ""}</p>
-      </div>
     `;
 
     track.appendChild(div);
