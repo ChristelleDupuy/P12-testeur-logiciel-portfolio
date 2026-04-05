@@ -1,181 +1,88 @@
-function handleNavbarScroll(){
-    const header = document.querySelector(".navbar");
-    window.onscroll = function () {
-        const top = window.scrollY;
-        if (top >= 100) {
-            header.classList.add("navbarDark");
-        } else {
-            header.classList.remove("navbarDark");
-        }
-    };
-}
-
-function handleNavbarCollapse() {
-    const navLinks = document.querySelectorAll(".nav-item");
-    const menuToggle = document.getElementById("navbarSupportedContent");
-
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            new bootstrap.Collapse(menuToggle).toggle();
-        });
-    });
-}
-
-function createSkillsFromJSON() {
-    const container = document.querySelector("#skills .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
-
-    fetch("data/skills.json")
-        .then((response) => response.json())
-        .then((data) => {
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card skillsText">
-                        <div class="card-body">
-                            <img src="/images/${item.image}" />
-                            <h4 class="card-title mt-3">${item.title}</h4>
-                            <p class="card-text mt-3">${item.text}</p>
-                        </div>
-                    </div>
-                `;
-
-                row.appendChild(card);
-
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
-            });
-        });
-}
-function createPortfolioFromJSON() {
-    const container = document.querySelector("#portfolio .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
-
-    fetch("data/portfolio.json")
-        .then((response) => response.json())
-        .then((data) => {
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/${item.image}" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">${item.title}</h4>
-                        <p class="card-text">${item.text}</p>
-                        <div class="text-center">
-                            <a href="${item.link}" class="btn btn-success">Lien</a>
-                        </div>
-                    </div>
-                </div>
-                `;
-
-                row.appendChild(card);
-
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
-            });
-        });
-}
-
-handleNavbarScroll();
-handleNavbarCollapse();
-
 const toggle = document.getElementById("theme-toggle");
-
-if (localStorage.getItem("theme") === "light") {
-  document.body.classList.add("light-mode");
-  toggle.checked = true;
-}
-
 const tooltip = document.getElementById("theme-tooltip");
 
-function updateTooltip() {
-  if (document.body.classList.contains("light-mode")) {
-    tooltip.textContent = "Passer en mode sombre";
-  } else {
-    tooltip.textContent = "Passer en mode clair";
-  }
-}
-
-updateTooltip();
-
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
+if (toggle) {
+  if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
-    localStorage.setItem("theme", "light");
-  } else {
-    document.body.classList.remove("light-mode");
-    localStorage.setItem("theme", "dark");
+    toggle.checked = true;
+  }
+
+  function updateTooltip() {
+    if (!tooltip) return;
+    tooltip.textContent = document.body.classList.contains("light-mode")
+      ? "Passer en mode sombre"
+      : "Passer en mode clair";
   }
 
   updateTooltip();
-});
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      document.body.classList.add("light-mode");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.remove("light-mode");
+      localStorage.setItem("theme", "dark");
+    }
+    updateTooltip();
+  });
+}
 
 const skills = [
-    { name: "CSS3", image: "/images/css3.svg", type: "dev", "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS" },
-    { name: "HTML5", image: "/images/html5.svg", type: "dev" },
-    { name: "JavaScript", image: "/images/javascript.svg", type: "dev" },
-    { name: "React", image: "/images/react.svg", type: "dev" },
-    { name: "Responsive Design", image: "/images/responsive.png", type: "dev" },
-    { name: "WordPress", image: "/images/wordpress.svg", type: "dev" },
-  
-    { name: "Cypress", image: "/images/cypress.svg", type: "qa" },
-    { name: "Postman", image: "/images/postman.svg", type: "qa" },
-    { name: "Swagger", image: "/images/swagger.svg", type: "qa" },
-    { name: "Stratégie de test", image: "/images/test.png", type: "qa" },
-    { name: "Optimisation & Debug", image: "/images/optimisation-et-debug.png", type: "qa" },
-  
-    { name: "Git", image: "/images/git.svg", type: "tools" },
-    { name: "GitHub", image: "/images/github.svg", type: "tools" },
-    { name: "Docker", image: "/images/docker.svg", type: "tools" },
-    { name: "Jira", image: "/images/jira.svg", type: "tools" },
-    { name: "Confluence", image: "/images/confluence.svg", type: "tools" },
-    { name: "Notion", image: "/images/notion.svg", type: "tools" },
-    { name: "Trello", image: "/images/trello.svg", type: "tools" },
-    { name: "Slack", image: "/images/slack.svg", type: "tools" },
-    { name: "Figma", image: "/images/figma.svg", type: "tools" },
-    { name: "Miro", image: "/images/miro.png", type: "tools" },
-    { name: "Visual Studio Code", image: "/images/vscode.svg", type: "tools" },
-    { name: "Agile / Scrum", image: "/images/agile.png", type: "tools" },
-    { name: "Gestion de projet", image: "/images/gestion-de-projet.png", type: "tools" }
-  ];
-  
-  function generateSkills() {
-    const track = document.getElementById("skills-track");
-  
-    const doubledSkills = skills.concat(skills);
-  
-    doubledSkills.forEach(skill => {
-      const div = document.createElement("div");
-      div.classList.add("skill-item", skill.type);
-  
-      div.innerHTML = `
-  <img src="${skill.image}" alt="${skill.name}">
-  <span>${skill.name}</span>
+  { name: "CSS3", image: "/images/css3.svg", type: "dev", text: "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS" },
+  { name: "HTML5", image: "/images/html5.svg", type: "dev" },
+  { name: "JavaScript", image: "/images/javascript.svg", type: "dev" },
+  { name: "React", image: "/images/react.svg", type: "dev" },
+  { name: "Responsive Design", image: "/images/responsive.png", type: "dev" },
+  { name: "WordPress", image: "/images/wordpress.svg", type: "dev" },
 
-  <div class="skill-popup">
-    <strong>${skill.name}</strong>
-    <p>${skill.text || ""}</p>
-  </div>
-`;
-  
-      track.appendChild(div);
-    });
-  }
-  
-  generateSkills();
+  { name: "Cypress", image: "/images/cypress.svg", type: "qa" },
+  { name: "Postman", image: "/images/postman.svg", type: "qa" },
+  { name: "Swagger", image: "/images/swagger.svg", type: "qa" },
+  { name: "Stratégie de test", image: "/images/test.png", type: "qa" },
+  { name: "Optimisation & Debug", image: "/images/optimisation-et-debug.png", type: "qa" },
 
-  const form = document.getElementById("contactForm");
+  { name: "Git", image: "/images/git.svg", type: "tools" },
+  { name: "GitHub", image: "/images/github.svg", type: "tools" },
+  { name: "Docker", image: "/images/docker.svg", type: "tools" },
+  { name: "Jira", image: "/images/jira.svg", type: "tools" },
+  { name: "Confluence", image: "/images/confluence.svg", type: "tools" },
+  { name: "Notion", image: "/images/notion.svg", type: "tools" },
+  { name: "Trello", image: "/images/trello.svg", type: "tools" },
+  { name: "Slack", image: "/images/slack.svg", type: "tools" },
+  { name: "Figma", image: "/images/figma.svg", type: "tools" },
+  { name: "Miro", image: "/images/miro.png", type: "tools" },
+  { name: "Visual Studio Code", image: "/images/vscode.svg", type: "tools" },
+  { name: "Agile / Scrum", image: "/images/agile.png", type: "tools" },
+  { name: "Gestion de projet", image: "/images/gestion-de-projet.png", type: "tools" }
+];
+
+function generateSkills() {
+  const track = document.getElementById("skills-track");
+  if (!track) return;
+
+  const doubledSkills = skills.concat(skills);
+
+  doubledSkills.forEach(skill => {
+    const div = document.createElement("div");
+    div.classList.add("skill-item", skill.type);
+
+    div.innerHTML = `
+      <img src="${skill.image}" alt="${skill.name}">
+      <span>${skill.name}</span>
+      <div class="skill-popup">
+        <strong>${skill.name}</strong>
+        <p>${skill.text || ""}</p>
+      </div>
+    `;
+
+    track.appendChild(div);
+  });
+}
+
+generateSkills();
+
+const form = document.getElementById("contactForm");
 const successMessage = document.getElementById("formSuccess");
 
 if (form) {
@@ -208,7 +115,6 @@ function revealOnScroll() {
 
   timelineItems.forEach(item => {
     const itemTop = item.getBoundingClientRect().top;
-
     if (itemTop < triggerBottom) {
       item.classList.add("show");
     }
@@ -219,75 +125,71 @@ window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
 document.addEventListener("DOMContentLoaded", function () {
+  const modalButtons = document.querySelectorAll(".open-modal");
+  const modals = document.querySelectorAll(".modal-overlay");
+  const closeButtons = document.querySelectorAll(".close-modal");
 
-    const modalButtons = document.querySelectorAll(".open-modal");
-    const modals = document.querySelectorAll(".modal-overlay");
-    const closeButtons = document.querySelectorAll(".close-modal");
-  
-    modalButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const modalId = button.getAttribute("data-modal");
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.classList.add("active");
-        }
-      });
+  modalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.add("active");
     });
-  
-    closeButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        button.closest(".modal-overlay").classList.remove("active");
-      });
-    });
-  
-    modals.forEach(modal => {
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.remove("active");
-        }
-      });
-    });
-  
   });
 
-  const nav = document.querySelector(".navbar-nav");
+  closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      button.closest(".modal-overlay").classList.remove("active");
+    });
+  });
+
+  modals.forEach(modal => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  });
+});
+
+const nav = document.querySelector(".navbar-nav");
 const links = document.querySelectorAll(".nav-link");
 
-const indicator = document.createElement("div");
-indicator.classList.add("nav-indicator");
-nav.appendChild(indicator);
+if (nav && links.length > 0) {
+  const indicator = document.createElement("div");
+  indicator.classList.add("nav-indicator");
+  nav.appendChild(indicator);
 
-function moveIndicator(element) {
-  const rect = element.getBoundingClientRect();
-  const parentRect = nav.getBoundingClientRect();
+  function moveIndicator(element) {
+    const rect = element.getBoundingClientRect();
+    const parentRect = nav.getBoundingClientRect();
 
-  indicator.style.width = rect.width + "px";
-  indicator.style.left = rect.left - parentRect.left + "px";
-}
-
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    moveIndicator(link);
-  });
-});
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  document.querySelectorAll("section").forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
+    indicator.style.width = rect.width + "px";
+    indicator.style.left = rect.left - parentRect.left + "px";
+  }
 
   links.forEach(link => {
-    if (link.getAttribute("href").includes(current)) {
+    link.addEventListener("mouseenter", () => {
       moveIndicator(link);
-    }
+    });
   });
-});
 
-if (links.length > 0) {
-    moveIndicator(links[0]);
-  }
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("section").forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach(link => {
+      if (link.getAttribute("href").includes(current)) {
+        moveIndicator(link);
+      }
+    });
+  });
+
+  moveIndicator(links[0]);
+}
