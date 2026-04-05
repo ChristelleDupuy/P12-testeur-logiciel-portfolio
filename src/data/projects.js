@@ -15,6 +15,7 @@ const projects = [
     title: "Riding Cities",
     image: riding,
     category: ["dev"],
+    isFormation: true,
     details: {
       resume: "Création d’une section web à partir d’une maquette Figma dans un contexte de formation professionnalisante.",
       objectif: "Intégrer une section accessible et responsive en respectant fidèlement une maquette.",
@@ -37,6 +38,7 @@ const projects = [
     title: "Booki",
     image: booki,
     category: ["dev"],
+    isFormation: true,
     details: {
       resume: "Création d’un site web de recherche d’hébergements à partir d’une maquette fournie.",
       objectif: "Intégrer fidèlement une maquette en HTML/CSS et garantir un affichage responsive.",
@@ -61,6 +63,7 @@ const projects = [
     title: "JSE Avocats",
     image: jse,
     category: ["test"],
+    qa: "https://dolomite-rondeletia-83c.notion.site/213539a52467808b8333dad536646945",
     details: {
       resume: "Réalisation d’une campagne complète de tests sur un site web.",
       objectif: "Garantir la qualité fonctionnelle du produit avant mise en production.",
@@ -77,7 +80,8 @@ const projects = [
         "Rigueur dans la documentation",
         "Vision qualité orientée utilisateur"
       ],
-      stack: ["Tests manuels", "Jira", "Documentation"]
+      stack: ["Tests manuels", "Notion", "Documentation"]
+
     }
   },
 
@@ -85,6 +89,7 @@ const projects = [
     title: "724events",
     image: events,
     category: ["test"],
+    qa: "https://dolomite-rondeletia-83c.notion.site/217539a5246780f39de5f41fd064032e",
     details: {
       resume: "Audit complet d’un site événementiel.",
       objectif: "Identifier les axes d’amélioration en qualité et performance.",
@@ -179,21 +184,31 @@ const projects = [
     title: "Menu Maker by Qwenta",
     image: qwenta,
     category: ["gestion"],
+    kanban: "https://trello.com/invite/b/6938740a8f8a3531bda4f52e/ATTI7264384d2476971dad1ab453720f6d4b4ACE9296/menu-maker-qwenta",
     details: {
-      resume: "Rédaction de spécifications techniques pour une application.",
-      objectif: "Structurer un projet web et organiser son développement.",
+      resume: "Rédaction de spécifications techniques et organisation d’un projet web complet.",
+      objectif: "Structurer un projet web en définissant les besoins, l’architecture et la planification.",
       travail: [
-        "Rédaction des spécifications",
-        "Organisation en Kanban",
-        "Analyse des besoins",
-        "Préparation de présentation"
+        "Rédaction des spécifications techniques",
+        "Organisation du projet avec Trello",
+        "Création d’un Kanban",
+        "Veille technologique",
+        "Préparation de présentation projet"
       ],
       learned: [
-        "Analyse des besoins utilisateurs",
-        "Organisation Agile",
-        "Rédaction technique"
+        "Gestion de projet Agile",
+        "Utilisation de Trello",
+        "Rédaction technique",
+        "Vision produit"
       ],
-      stack: ["Notion", "Kanban", "Spécifications"]
+      stack: ["Trello", "Kanban", "Spécifications"]
+    },
+  
+    docs: {
+      specs: "/docs/qwenta/specifications.pdf",
+      kanban: "/docs/qwenta/kanban.pdf",
+      veille: "/docs/qwenta/veille.pdf",
+      presentation: "/docs/qwenta/presentation.pdf"
     }
   },
 
@@ -239,13 +254,19 @@ const projects = [
         "Organisation des tests"
       ],
       stack: ["Test strategy", "QA", "Documentation"]
-    }
+    },
+      docs: {
+        exigences: "/docs/tomsen/revue-exigences.pdf",
+        strategie: "/docs/tomsen/strategie-test.pdf",
+        recette: "/docs/tomsen/cahier-recette.xlsx"
+      }
   },
 
   {
     title: "Portfolio",
     image: portfolio,
     category: ["dev"],
+    github: "https://github.com/ChristelleDupuy/P12-testeur-logiciel-portfolio",
     details: {
       resume: "Création de mon portfolio professionnel.",
       objectif: "Mettre en valeur mes compétences en QA et front-end.",

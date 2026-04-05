@@ -122,11 +122,91 @@ export default function Portfolio() {
                 </a>
               )}
 
-              {!selectedProject.github && !selectedProject.demo && (
-                <p style={{ fontSize: "0.9rem", opacity: 0.7, marginTop: "10px" }}>
-                 Projet réalisé dans le cadre de ma formation OpenClassrooms
-                </p>
+              {selectedProject.qa && (
+                <a
+                  href={selectedProject.qa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="open-modal"
+                  style={{ marginLeft: "10px" }}
+                >
+                  Dossier de tests
+                </a>
+              )}
+
+              {selectedProject.kanban && (
+                <a
+                  href={selectedProject.kanban}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="open-modal"
+                  style={{ marginLeft: "10px" }}
+                >
+                  Kanban (Trello)
+                </a>
                )}
+
+{selectedProject.docs && (
+  <div style={{ marginTop: "10px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+    {selectedProject.docs.specs && (
+      <a href={selectedProject.docs.specs} target="_blank" className="open-modal">
+        Spécifications
+      </a>
+    )}
+
+    {selectedProject.docs.veille && (
+      <a
+        href={selectedProject.docs.veille}
+        target="_blank"
+        className="open-modal"
+        style={{ marginLeft: "10px" }}
+      >
+        Veille
+      </a>
+    )}
+
+    {selectedProject.docs.presentation && (
+      <a
+        href={selectedProject.docs.presentation}
+        target="_blank"
+        className="open-modal"
+        style={{ marginLeft: "10px" }}
+      >
+        Présentation
+      </a>
+    )}
+  </div>
+)}
+
+{selectedProject.docs && (
+  <div style={{ marginTop: "10px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+
+    {selectedProject.docs.exigences && (
+      <a href={selectedProject.docs.exigences} target="_blank" className="open-modal">
+        Revue des exigences
+      </a>
+    )}
+
+    {selectedProject.docs.strategie && (
+      <a href={selectedProject.docs.strategie} target="_blank" className="open-modal">
+        Stratégie de test
+      </a>
+    )}
+
+    {selectedProject.docs.recette && (
+      <a href={selectedProject.docs.recette} target="_blank" className="open-modal">
+        Cahier de recette
+      </a>
+    )}
+
+  </div>
+)}
+
+{selectedProject.isFormation && (
+  <p style={{ fontSize: "0.9rem", opacity: 0.7, marginTop: "10px" }}>
+    Projet réalisé dans le cadre de ma formation OpenClassrooms
+  </p>
+)}
             </div>
           </div>
         </div>
