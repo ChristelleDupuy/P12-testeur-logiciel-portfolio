@@ -126,3 +126,73 @@ html.light-mode {
     border-color: var(--accent-color);
     box-shadow: 0 8px 30px rgba(179, 57, 57, 0.15);
   }
+
+  body.light-mode .project-card img {
+    background: #ffffff
+  }
+
+  body.light-mode .project-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  body.light-mode .project-card h3 {
+    color: #222;
+  }
+  
+  body.light-mode .project-card p {
+    color: #555;
+  }
+
+  body.light-mode .project-card .open-modal {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    background: transparent;
+  }
+  
+  body.light-mode .project-card .open-modal:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  body.light-mode .switch {
+    background-color: #e4e4e4;
+  }
+  
+  body.light-mode .slider {
+    background-color: #e4e4e4;
+  }
+
+  body.light-mode .project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  body.light-mode .skills-block {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  body.light-mode .skills-block li {
+    color: #333 !important;
+  }
+  
+  body.light-mode .skills-block .level {
+    color: #777 !important;
+  }
+
+  html.light-mode,
+  body.light-mode {
+    --bg-color: #f7f7f9;
+    --text-color: #1c1c1c;
+    --accent-color: #b33939;
+    --title-color: #000000;
+    --surface-color: #f5f5f2;
+    --border-color: #e6e6e6;
+    --card-bg: #ffffff;
+    --text-muted: #666;
+    --input-bg: #ffffff;
+  }

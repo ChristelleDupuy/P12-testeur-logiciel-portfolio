@@ -1,8 +1,14 @@
 import riding from "../assets/projects/riding.png";
 import booki from "../assets/projects/booki.png";
+import jse from "../assets/projects/jse.png";
+import events from "../assets/projects/events.png";
+import printit from "../assets/projects/printit.png";
+import sophie from "../assets/projects/sophie.png";
 import kasa from "../assets/projects/kasa.png";
-
-const placeholder = riding;
+import qwenta from "../assets/projects/qwenta.png";
+import ecobliss from "../assets/projects/ecobliss.png";
+import tomsen from "../assets/projects/tomsen.png";
+import portfolio from "../assets/projects/portfolio.png";
 
 const projects = [
   {
@@ -53,7 +59,7 @@ const projects = [
 
   {
     title: "JSE Avocats",
-    image: placeholder,
+    image: jse,
     category: ["test"],
     details: {
       resume: "Réalisation d’une campagne complète de tests sur un site web.",
@@ -77,7 +83,7 @@ const projects = [
 
   {
     title: "724events",
-    image: placeholder,
+    image: events,
     category: ["test"],
     details: {
       resume: "Audit complet d’un site événementiel.",
@@ -99,7 +105,7 @@ const projects = [
 
   {
     title: "Print it",
-    image: placeholder,
+    image: printit,
     category: ["dev"],
     details: {
       resume: "Ajout de fonctionnalités dynamiques en JavaScript.",
@@ -123,7 +129,7 @@ const projects = [
 
   {
     title: "Sophie Bluel",
-    image: placeholder,
+    image: sophie,
     category: ["dev"],
     details: {
       resume: "Création d’un site dynamique avec API.",
@@ -171,7 +177,7 @@ const projects = [
 
   {
     title: "Menu Maker by Qwenta",
-    image: placeholder,
+    image: qwenta,
     category: ["gestion"],
     details: {
       resume: "Rédaction de spécifications techniques pour une application.",
@@ -193,7 +199,7 @@ const projects = [
 
   {
     title: "Eco Bliss Bath",
-    image: placeholder,
+    image: ecobliss,
     category: ["dev", "test"],
     details: {
       resume: "Débogage et optimisation d’un site web.",
@@ -216,7 +222,7 @@ const projects = [
 
   {
     title: "Tomsen by PayForge",
-    image: placeholder,
+    image: tomsen,
     category: ["test", "gestion"],
     details: {
       resume: "Création d’une stratégie de test complète.",
@@ -238,7 +244,7 @@ const projects = [
 
   {
     title: "Portfolio",
-    image: placeholder,
+    image: portfolio,
     category: ["dev"],
     details: {
       resume: "Création de mon portfolio professionnel.",
