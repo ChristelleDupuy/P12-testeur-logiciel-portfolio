@@ -1,16 +1,138 @@
-# React + Vite
+# 🚀 Portfolio – Christelle Dupuy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QA Engineer & Développeuse Front-End
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Portfolio en ligne
 
-## React Compiler
+👉 https://christelledupuy.github.io/P12-testeur-logiciel-portfolio/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 👋 Présentation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ce projet est mon portfolio professionnel, conçu pour présenter mon profil hybride en **qualité logicielle (QA)** et **développement front-end**.
+
+Il met en avant mes compétences, mes projets ainsi que mon parcours, avec une attention particulière portée à la **qualité du produit** et à l’**expérience utilisateur**.
+
+---
+
+## 🧠 Démarche
+
+Ce projet a été réalisé en deux phases :
+
+* 🔧 Correction et optimisation d’un portfolio existant (debug, responsive, performance)
+* 🎨 Personnalisation complète pour refléter mon profil et mon identité professionnelle
+
+J’ai fait le choix d’une **architecture hybride React + JavaScript vanilla**, permettant :
+
+* une évolution progressive du projet
+* une meilleure flexibilité
+* une optimisation ciblée des interactions UI
+
+---
+
+## 🧪 Projets QA mis en avant
+
+* **JSE Avocats**
+  → Campagne de tests complète + cahier de recette
+
+* **724 Events**
+  → Audit qualité, analyse de performance et recommandations
+
+* **Tomsen (PayForge)**
+  → Revue d’exigences, stratégie de test et cahier de recette
+
+* **Menu Maker by Qwenta**
+  → Spécifications techniques, organisation projet (Kanban Trello), veille technologique
+
+---
+
+## ⚙️ Stack technique
+
+### Front-end
+
+* React
+* JavaScript (ES6+)
+* HTML5 / CSS3
+
+### QA & Tests
+
+* Cypress
+* Postman
+* Swagger
+
+### Outils
+
+* Git / GitHub
+* Vite
+* Figma
+* Trello
+
+---
+
+## ✨ Fonctionnalités
+
+* 🌗 Mode sombre / clair avec persistance
+* 📱 Responsive design (mobile / tablette / desktop)
+* 🧩 Composants React modulaires
+* 🎯 Timeline interactive (expériences professionnelles)
+* 🎠 Carrousel dynamique des compétences
+* 📄 Téléchargement du CV
+* 🧠 Animations au scroll
+* 📬 Formulaire de contact avec feedback utilisateur
+* 📊 Intégration de livrables QA (tests, audit, stratégie)
+
+---
+
+## 📁 Structure du projet
+
+```
+public/
+  ├── images/
+  ├── CV/
+  ├── docs/
+
+src/
+  ├── components/
+  ├── data/
+  ├── styles/
+  ├── assets/
+
+script/
+  └── legacy.js
+```
+
+---
+
+## 🚀 Lancer le projet
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 💡 Points forts
+
+* Profil hybride QA / Front-End
+* Démarche qualité appliquée au développement
+* Mise en avant de livrables concrets (tests, stratégie, audit)
+* Code structuré, maintenable et évolutif
+* Expérience utilisateur optimisée
+
+---
+
+## 👩‍💻 Auteur
+
+**Christelle Dupuy**
+QA Engineer & Développeuse Front-End
+
+---
+
+## 📎 Liens
+
+* 🐙 GitHub : https://github.com/ChristelleDupuy/P12-testeur-logiciel-portfolio
+* 🔗 LinkedIn : https://www.linkedin.com/in/christelle-d-901bbb164/
