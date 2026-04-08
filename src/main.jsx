@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Portfolio from "./components/Portfolio";
+import "./script/legacy.js";
 import "./styles/variables.css";
 import "./styles/base.css";
 import "./styles/layout.css";

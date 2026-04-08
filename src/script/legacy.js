@@ -1,5 +1,6 @@
 const toggle = document.getElementById("theme-toggle");
 const tooltip = document.getElementById("theme-tooltip");
+const BASE = import.meta.env.BASE_URL;
 
 if (toggle) {
   if (localStorage.getItem("theme") === "light") {
@@ -29,32 +30,32 @@ if (toggle) {
 }
 
 const skills = [
-  { name: "CSS3", image: "/images/css3.svg", type: "dev" },
-  { name: "HTML5", image: "/images/html5.svg", type: "dev" },
-  { name: "JavaScript", image: "/images/javascript.svg", type: "dev" },
-  { name: "React", image: "/images/react.svg", type: "dev" },
-  { name: "Responsive Design", image: "/images/responsive.png", type: "dev" },
-  { name: "WordPress", image: "/images/wordpress.svg", type: "dev" },
+  { name: "CSS3", image: BASE + "images/css3.svg", type: "dev" },
+  { name: "HTML5", image: BASE + "images/html5.svg", type: "dev" },
+  { name: "JavaScript", image: BASE + "images/javascript.svg", type: "dev" },
+  { name: "React", image: BASE + "images/react.svg", type: "dev" },
+  { name: "Responsive Design", image: BASE + "images/responsive.png", type: "dev" },
+  { name: "WordPress", image: BASE + "images/wordpress.svg", type: "dev" },
 
-  { name: "Cypress", image: "/images/cypress.svg", type: "qa" },
-  { name: "Postman", image: "/images/postman.svg", type: "qa" },
-  { name: "Swagger", image: "/images/swagger.svg", type: "qa" },
-  { name: "Stratégie de test", image: "/images/test.png", type: "qa" },
-  { name: "Optimisation & Debug", image: "/images/optimisation-et-debug.png", type: "qa" },
+  { name: "Cypress", image: BASE + "images/cypress.svg", type: "qa" },
+  { name: "Postman", image: BASE + "images/postman.svg", type: "qa" },
+  { name: "Swagger", image: BASE + "images/swagger.svg", type: "qa" },
+  { name: "Stratégie de test", image: BASE + "images/test.png", type: "qa" },
+  { name: "Optimisation & Debug", image: BASE + "images/optimisation-et-debug.png", type: "qa" },
 
-  { name: "Git", image: "/images/git.svg", type: "tools" },
-  { name: "GitHub", image: "/images/github.svg", type: "tools" },
-  { name: "Docker", image: "/images/docker.svg", type: "tools" },
-  { name: "Jira", image: "/images/jira.svg", type: "tools" },
-  { name: "Confluence", image: "/images/confluence.svg", type: "tools" },
-  { name: "Notion", image: "/images/notion.svg", type: "tools" },
-  { name: "Trello", image: "/images/trello.svg", type: "tools" },
-  { name: "Slack", image: "/images/slack.svg", type: "tools" },
-  { name: "Figma", image: "/images/figma.svg", type: "tools" },
-  { name: "Miro", image: "/images/miro.png", type: "tools" },
-  { name: "Visual Studio Code", image: "/images/vscode.svg", type: "tools" },
-  { name: "Agile / Scrum", image: "/images/agile.png", type: "tools" },
-  { name: "Gestion de projet", image: "/images/gestion-de-projet.png", type: "tools" }
+  { name: "Git", image: BASE + "images/git.svg", type: "tools" },
+  { name: "GitHub", image: BASE + "images/github.svg", type: "tools" },
+  { name: "Docker", image: BASE + "images/docker.svg", type: "tools" },
+  { name: "Jira", image: BASE + "images/jira.svg", type: "tools" },
+  { name: "Confluence", image: BASE + "images/confluence.svg", type: "tools" },
+  { name: "Notion", image: BASE + "images/notion.svg", type: "tools" },
+  { name: "Trello", image: BASE + "images/trello.svg", type: "tools" },
+  { name: "Slack", image: BASE + "images/slack.svg", type: "tools" },
+  { name: "Figma", image: BASE + "images/figma.svg", type: "tools" },
+  { name: "Miro", image: BASE + "images/miro.png", type: "tools" },
+  { name: "Visual Studio Code", image: BASE + "images/vscode.svg", type: "tools" },
+  { name: "Agile / Scrum", image: BASE + "images/agile.png", type: "tools" },
+  { name: "Gestion de projet", image: BASE + "images/gestion-de-projet.png", type: "tools" }
 ];
 
 function generateSkills() {
