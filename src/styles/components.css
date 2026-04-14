@@ -298,7 +298,7 @@
   }
   
   .skill-item:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     background: var(--accent-color);
     color: white;
   }

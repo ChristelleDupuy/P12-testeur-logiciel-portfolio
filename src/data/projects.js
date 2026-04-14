@@ -205,10 +205,10 @@ const projects = [
     },
   
     docs: {
-      specs: "/docs/qwenta/specifications.pdf",
-      kanban: "/docs/qwenta/kanban.pdf",
-      veille: "/docs/qwenta/veille.pdf",
-      presentation: "/docs/qwenta/presentation.pdf"
+      specs: "docs/qwenta/specifications.pdf",
+      kanban: "docs/qwenta/kanban.pdf",
+      veille: "docs/qwenta/veille.pdf",
+      presentation: "docs/qwenta/presentation.pdf"
     }
   },
 
@@ -256,9 +256,9 @@ const projects = [
       stack: ["Test strategy", "QA", "Documentation"]
     },
       docs: {
-        exigences: "/docs/tomsen/revue-exigences.pdf",
-        strategie: "/docs/tomsen/strategie-test.pdf",
-        recette: "/docs/tomsen/cahier-recette.xlsx"
+        exigences: "docs/tomsen/revue-exigences.pdf",
+        strategie: "docs/tomsen/strategie-test.pdf",
+        recette: "docs/tomsen/cahier-recette.xlsx"
       }
   },
 
